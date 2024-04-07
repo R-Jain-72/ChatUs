@@ -187,8 +187,8 @@ const Login = () => {
                  value={password.value}
                  onChange={password.changeHandler}
                 />  
-
-                {/* to show the error message */}
+                {/* this is commented so that we can keep a simple password
+                 to show the error message 
                 {
                     password.error && (
                         <Typography color="error" variant='caption'>
@@ -196,6 +196,7 @@ const Login = () => {
                         </Typography>
                     )
                 }
+                */} 
     
                 <Button 
                 sx={{
