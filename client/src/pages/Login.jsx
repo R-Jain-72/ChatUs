@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Paper, TextField, Typography, Button, Stack, Avatar, IconButton } from '@mui/material';
 import { CameraAlt as CameraAltIcon } from '@mui/icons-material';
 import { VisuallyHiddenInput } from '../components/styles/StyledComponents';
-import {useInputValidation,useStrongPassword} from '6pp';
+import {useFileHandler, useInputValidation,useStrongPassword} from '6pp';
 import { usernameValidator } from '../utils/validators';
 
 const Login = () => {
@@ -16,6 +16,8 @@ const Login = () => {
     const bio = useInputValidation("");
     const username = useInputValidation("", usernameValidator);
     const password = useStrongPassword();
+
+    const avatar = useFileHandler("single");//single -> selects only single file(as only one pic can be your avatar)
 
   return (
   <Container 
@@ -129,7 +131,7 @@ const Login = () => {
                     >
                         <>
                             <CameraAltIcon />
-                            <VisuallyHiddenInput type="file" />
+                            <VisuallyHiddenInput type="file" onChange={avatar.changeHandler} />
                         </>
                     </IconButton>
                 </Stack>
