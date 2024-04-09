@@ -77,7 +77,7 @@ const Login = () => {
                 marginTop: "1rem",
             }} 
             variant="contained" 
-            color="primary" 
+            color="secondary" 
             type="submit"
             fullWidth
             >
