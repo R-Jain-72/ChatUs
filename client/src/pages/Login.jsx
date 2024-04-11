@@ -77,7 +77,7 @@ const Login = () => {
                 marginTop: "1rem",
             }} 
             variant="contained" 
-            color="secondary" 
+            color="primary" 
             type="submit"
             fullWidth
             >
@@ -114,6 +114,7 @@ const Login = () => {
                             height: "10rem",
                             objectFit: "contain",
                         }}
+                        src={avatar.preview} //shows the avatar
                     />
 
                     <IconButton 
@@ -135,6 +136,20 @@ const Login = () => {
                         </>
                     </IconButton>
                 </Stack>
+
+                {
+                    avatar.error && (
+                        <Typography 
+                            m={"1rem"} 
+                            width={"fit-content"}
+                            display={"block"}
+                            color="error" 
+                            variant='caption'
+                        >
+                            {avatar.error}
+                        </Typography>
+                    )
+                }
 
                 <TextField 
                  required
