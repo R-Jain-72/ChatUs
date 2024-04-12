@@ -18,6 +18,14 @@ const Login = () => {
     const password = useStrongPassword();
 
     const avatar = useFileHandler("single");//single -> selects only single file(as only one pic can be your avatar)
+    
+    const handleLogin = (e) => {
+        e.preventDefault();
+    };
+
+    const handleSignUp = (e) => {
+        e.preventDefault();
+    };
 
   return (
   <Container 
@@ -49,6 +57,8 @@ const Login = () => {
             width: "100%",
             marginTop: "1rem",
         }}>
+        onSubmit={handleLogin}
+
             <TextField 
              required
              fullWidth
@@ -105,7 +115,9 @@ const Login = () => {
             <form style={{
                 width: "100%",
                 marginTop: "1rem",
-            }}>
+            }}
+            >
+            onSubmit={handleSignUp}
 
                 <Stack position={"relative"} width={"10rem"} margin={"auto"}> 
                     <Avatar 
