@@ -31,7 +31,7 @@ const Login = () => {
 
   <div
     style={{
-        backgroundImageStyle: 
+        backgroundImage: 
         "linear-gradient(rgba(200,200,200,0.5), rgba(120,110,220,0.5))",
     }}
   >
@@ -63,8 +63,9 @@ const Login = () => {
         <form style={{
             width: "100%",
             marginTop: "1rem",
-        }}>
+        }}
         onSubmit={handleLogin}
+        >
 
             <TextField 
              required
@@ -123,8 +124,8 @@ const Login = () => {
                 width: "100%",
                 marginTop: "1rem",
             }}
-            >
             onSubmit={handleSignUp}
+            >
 
                 <Stack position={"relative"} width={"10rem"} margin={"auto"}> 
                     <Avatar 
